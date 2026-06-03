@@ -159,7 +159,19 @@
   .hy-vrail .hy-vrail-readout .lbl { display:block; font-size:10px; letter-spacing:0.22em; text-transform:uppercase; color:rgba(232,192,140,0.7); margin-bottom:4px; font-weight:600; }
   .hy-vrail .hy-vrail-readout .num { display:block; font-family:'Recoleta','Cormorant Garamond','Times New Roman',serif; font-size:54px; line-height:1; color:#e8c08c; letter-spacing:-0.02em; font-feature-settings:'tnum'; font-weight:400; }
   .hy-vrail .hy-vrail-readout .of { display:block; font-size:10px; color:rgba(232,192,140,0.55); letter-spacing:0.18em; margin-top:6px; text-transform:uppercase; font-weight:500; }
-  @media (max-width:1200px) { .hy-vrail { display:none; } }
+  @media (max-width:1200px) and (min-width:769px) {
+  .hy-vrail { width:118px; right:12px; }
+  .hy-vrail .hy-vrail-track { right:26px; width:18px; top:14vh; bottom:14vh; }
+  .hy-vrail .hy-vrail-dot { width:10px; height:10px; box-shadow:0 0 0 4px rgba(232,192,140,0.16), 0 0 16px rgba(232,192,140,0.75); }
+  .hy-vrail .hy-vrail-tick.decade { width:10px; }
+  .hy-vrail .hy-vrail-tick.small { width:5px; }
+  .hy-vrail .hy-vrail-tick-label { left:18px; font-size:9px; letter-spacing:0.1em; }
+  .hy-vrail .hy-vrail-readout { right:42px; }
+  .hy-vrail .hy-vrail-readout .lbl { font-size:9px; margin-bottom:2px; letter-spacing:0.18em; }
+  .hy-vrail .hy-vrail-readout .num { font-size:38px; }
+  .hy-vrail .hy-vrail-readout .of { font-size:9px; margin-top:4px; }
+}
+@media (max-width:768px) { .hy-vrail { display:none; } }
 
   @media (max-width:1100px) { .hy-stability-card { grid-template-columns:1fr; gap:40px; padding:48px 36px; } .hy-stability-priceblock { border-right:0; border-bottom:1px solid rgba(255,255,255,0.08); padding-right:0; padding-bottom:32px; } .hy-cust-grid { grid-template-columns:1fr 1fr; } }
   @media (max-width:900px) { .hy-section { padding:80px 24px; } .hy-confidence, .hy-pillar-grid, .hy-feature-grid, .hy-test-grid { grid-template-columns:1fr 1fr; } .hy-cust-grid { grid-template-columns:1fr; } .hy-inst-row { grid-template-columns:1fr 1fr; } .hy-transparency-card { padding:40px 24px; } .hy-stability-card { padding:40px 28px; } }
