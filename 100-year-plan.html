@@ -1,0 +1,345 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>The 100-Year Plan — Built to outlast everything else.</title>
+<meta name="description" content="A single decision today that keeps your work online, hosted, and yours for a century — backed by a special trust, a special-purpose proxy, and a long-term investment.">
+<style>
+  /* === BASE === */
+  *, *:before, *:after { box-sizing: border-box; }
+  body { margin: 0; padding: 0; background:#101517; color:#fff; }
+
+  .hy-root { --gray-100:#101517; --gray-90:#1d2327; --gray-40:#a7aaad; --gray-20:#dcdcde; --wp-blue:#3858E9; --accent-warm:#e8c08c; --serif:'Recoleta','Cormorant Garamond','Times New Roman',serif; --sans:'Inter','SF Pro Display','Helvetica Neue',Arial,sans-serif; font-family:var(--sans); color:#fff; background:var(--gray-100); line-height:1.5; -webkit-font-smoothing:antialiased; width:100%; max-width:100vw; overflow-x:hidden; }
+  .hy-root h1, .hy-root h2, .hy-root h3 { font-family:var(--serif); font-weight:400; letter-spacing:-0.02em; line-height:1.05; margin:0; color:#fff; }
+  .hy-root p { margin:0; color:#fff; }
+  .hy-root h1 em, .hy-root h2 em { font-style:italic; color:var(--accent-warm); font-weight:300; }
+
+  .hy-section { padding:120px 32px; max-width:1280px; margin:0 auto; }
+  .hy-eyebrow { font-family:var(--sans); font-size:11px; font-weight:600; letter-spacing:0.18em; text-transform:uppercase; color:var(--accent-warm); margin-bottom:24px; display:inline-block; }
+
+  /* === HERO === */
+  .hy-hero { position:relative; min-height:100vh; display:flex; align-items:center; overflow:hidden; background:#0a0d0f; }
+  .hy-hero-video { position:absolute; inset:0; width:100%; height:100%; object-fit:cover; opacity:0.55; }
+  .hy-hero-overlay { position:absolute; inset:0; background:linear-gradient(180deg, rgba(16,21,23,0.4) 0%, rgba(16,21,23,0.85) 100%); }
+  .hy-hero-inner { position:relative; z-index:2; max-width:1280px; margin:0 auto; padding:0 32px; width:100%; }
+  .hy-hero h1 { font-size:clamp(56px, 9vw, 132px); margin-bottom:40px; }
+  .hy-hero-lede { font-size:clamp(20px, 2vw, 26px); max-width:720px; color:var(--gray-20); margin-bottom:48px; font-weight:300; line-height:1.4; }
+  .hy-cta { display:inline-flex; align-items:center; gap:12px; padding:18px 32px; background:var(--wp-blue); color:#fff; text-decoration:none; border-radius:6px; font-weight:500; font-size:16px; transition:transform 0.2s, background 0.2s; }
+  .hy-cta:hover { background:#2a45c4; transform:translateY(-2px); }
+  .hy-cta.outline { background:transparent; border:1px solid rgba(255,255,255,0.3); color:#fff; }
+  .hy-cta.outline:hover { background:rgba(255,255,255,0.06); border-color:#fff; }
+  .hy-cta-row { display:flex; gap:16px; flex-wrap:wrap; }
+  .hy-confidence { background:var(--gray-90); padding:32px; display:grid; grid-template-columns:repeat(4, 1fr); gap:32px; margin-top:80px; border-top:1px solid rgba(232,192,140,0.2); border-bottom:1px solid rgba(232,192,140,0.2); }
+  .hy-confidence-item .num { font-family:var(--serif); font-size:42px; color:var(--accent-warm); display:block; line-height:1; margin-bottom:8px; }
+  .hy-confidence-item .label { font-size:13px; color:var(--gray-40); letter-spacing:0.05em; }
+
+  /* === PILLARS === */
+  .hy-pillars { background:#0a0d0f; }
+  .hy-pillars h2 { font-size:clamp(40px, 5vw, 72px); margin-bottom:24px; max-width:900px; }
+  .hy-pillars-lede { font-size:20px; color:var(--gray-20); max-width:720px; margin-bottom:80px; font-weight:300; }
+  .hy-pillar-grid { display:grid; grid-template-columns:repeat(3, 1fr); gap:1px; background:rgba(232,192,140,0.15); border:1px solid rgba(232,192,140,0.15); }
+  .hy-pillar { background:#0a0d0f; padding:48px 40px; display:flex; flex-direction:column; }
+  .hy-pillar-num { font-family:var(--serif); color:var(--accent-warm); font-size:18px; margin-bottom:32px; letter-spacing:0.1em; }
+  .hy-pillar h3 { font-size:32px; margin-bottom:24px; }
+  .hy-pillar p { color:var(--gray-20); font-size:16px; line-height:1.6; margin-bottom:24px; }
+  .hy-pillar-detail { margin-top:auto; padding-top:24px; border-top:1px solid rgba(255,255,255,0.08); font-size:13px; color:var(--gray-40); letter-spacing:0.04em; }
+
+  /* === TRANSPARENCY === */
+  .hy-transparency { background:#0a0d0f; }
+  .hy-transparency-card { background:linear-gradient(180deg, rgba(232,192,140,0.04), rgba(232,192,140,0.01)); border:1px solid rgba(232,192,140,0.2); padding:80px; max-width:1080px; margin:0 auto; }
+  .hy-transparency h2 { font-size:clamp(36px, 4.5vw, 64px); margin-bottom:32px; font-style:italic; }
+  .hy-transparency p { color:var(--gray-20); font-size:19px; line-height:1.7; margin-bottom:24px; max-width:780px; }
+  .hy-transparency strong { color:var(--accent-warm); font-weight:500; }
+
+  /* === INSTITUTIONS === */
+  .hy-institutions { background:var(--gray-90); }
+  .hy-institutions h2 { font-size:clamp(36px, 4.5vw, 64px); margin-bottom:24px; max-width:900px; }
+  .hy-institutions-lede { color:var(--gray-20); font-size:18px; max-width:680px; margin-bottom:60px; }
+  .hy-inst-row { display:grid; grid-template-columns:repeat(5, 1fr); gap:1px; background:rgba(255,255,255,0.08); }
+  .hy-inst { background:var(--gray-90); padding:40px 24px; text-align:center; }
+  .hy-inst-year { font-family:var(--serif); color:var(--accent-warm); font-size:36px; margin-bottom:12px; }
+  .hy-inst-name { font-size:15px; color:#fff; margin-bottom:8px; font-weight:500; }
+  .hy-inst-sub { font-size:12px; color:var(--gray-40); letter-spacing:0.04em; }
+  .hy-inst.you { background:linear-gradient(180deg, rgba(56,88,233,0.12), transparent); border-top:2px solid var(--wp-blue); }
+  .hy-inst.you .hy-inst-year { color:var(--wp-blue); font-size:28px; }
+
+  /* === CUSTOMERS === */
+  .hy-customers { background:#0a0d0f; }
+  .hy-customers h2 { font-size:clamp(40px, 5vw, 68px); margin-bottom:24px; max-width:900px; }
+  .hy-customers-lede { font-size:18px; color:var(--gray-20); max-width:680px; margin-bottom:60px; }
+  .hy-cust-grid { display:grid; grid-template-columns:repeat(4, 1fr); gap:20px; }
+  .hy-cust { position:relative; display:block; background:#15191c; border:1px solid rgba(255,255,255,0.06); border-radius:14px; overflow:hidden; text-decoration:none; color:inherit; transition:transform 0.25s ease, border-color 0.25s ease, background 0.25s ease; }
+  .hy-cust:hover { transform:translateY(-4px); border-color:rgba(232,192,140,0.4); background:#181d20; }
+  .hy-cust-shot { position:relative; width:100%; aspect-ratio:16/10; background:#0a0d0f; overflow:hidden; }
+  .hy-cust-shot img { width:100%; height:100%; object-fit:cover; display:block; transition:transform 0.6s ease, filter 0.3s ease; filter:saturate(0.85) brightness(0.92); }
+  .hy-cust:hover .hy-cust-shot img { transform:scale(1.04); filter:saturate(1) brightness(1); }
+  .hy-cust-shot::after { content:''; position:absolute; inset:0; background:linear-gradient(180deg, transparent 50%, rgba(10,13,15,0.85) 100%); pointer-events:none; }
+  .hy-cust-body { padding:24px 24px 28px; }
+  .hy-cust-domain { display:block; font-family:var(--sans); font-size:11px; letter-spacing:0.14em; text-transform:uppercase; color:var(--accent-warm); margin-bottom:10px; font-weight:600; }
+  .hy-cust-body h3 { font-family:var(--serif); font-size:24px; line-height:1.1; color:#fff; margin:0 0 10px; }
+  .hy-cust-body p { font-size:14px; line-height:1.55; color:var(--gray-20); margin:0 0 16px; }
+  .hy-cust-meta { display:inline-flex; align-items:center; gap:8px; font-size:11px; letter-spacing:0.12em; color:rgba(232,192,140,0.7); text-transform:uppercase; font-weight:600; }
+  .hy-cust-meta::after { content:'↗'; font-size:14px; transition:transform 0.2s ease; }
+  .hy-cust:hover .hy-cust-meta::after { transform:translate(2px, -2px); }
+  .hy-cust-soon { position:absolute; top:14px; right:14px; background:var(--accent-warm); color:#101517; font-size:10px; font-weight:700; letter-spacing:0.1em; padding:5px 10px; border-radius:3px; text-transform:uppercase; z-index:3; }
+
+  /* === STABILITY === */
+  .hy-stability { background:var(--gray-90); }
+  .hy-stability h2 { font-size:clamp(40px, 5vw, 68px); margin-bottom:24px; max-width:900px; }
+  .hy-stability-lede { color:var(--gray-20); font-size:19px; max-width:720px; margin-bottom:64px; line-height:1.6; }
+  .hy-stability-card { background:linear-gradient(180deg, rgba(232,192,140,0.05), rgba(232,192,140,0.01)); border:1px solid rgba(232,192,140,0.25); padding:64px 56px; display:grid; grid-template-columns:minmax(280px, 0.85fr) minmax(360px, 1.15fr); gap:72px; align-items:start; }
+  .hy-stability-priceblock { border-right:1px solid rgba(255,255,255,0.08); padding-right:56px; }
+  .hy-stability-label { font-size:12px; color:var(--gray-40); letter-spacing:0.12em; text-transform:uppercase; margin-bottom:16px; display:block; }
+  .hy-stability-price { font-family:var(--serif); font-size:clamp(64px, 7.5vw, 104px); color:var(--accent-warm); line-height:1; margin-bottom:12px; letter-spacing:-0.02em; white-space:nowrap; }
+  .hy-stability-sub { font-family:var(--serif); font-size:20px; color:var(--accent-warm); font-style:italic; margin-bottom:24px; display:block; }
+  .hy-stability-note { font-size:13px; color:var(--gray-40); line-height:1.6; }
+  .hy-stability-listblock h3 { font-family:var(--serif); font-size:26px; margin-bottom:24px; line-height:1.2; }
+  .hy-stability-list { list-style:none; padding:0; margin:0; }
+  .hy-stability-list li { padding:16px 0; border-top:1px solid rgba(255,255,255,0.08); font-size:16px; color:var(--gray-20); line-height:1.55; display:flex; gap:14px; align-items:flex-start; }
+  .hy-stability-list li:first-child { border-top:0; padding-top:0; }
+  .hy-stability-list li::before { content:'⌖'; color:var(--accent-warm); font-family:var(--serif); font-size:18px; line-height:1.4; flex:0 0 16px; }
+  .hy-stability-list li > span { flex:1 1 auto; min-width:0; }
+
+  /* === FEATURES === */
+  .hy-features { background:#0a0d0f; }
+  .hy-features h2 { font-size:clamp(36px, 4.5vw, 56px); margin-bottom:60px; }
+  .hy-feature-grid { display:grid; grid-template-columns:repeat(3, 1fr); gap:1px; background:rgba(255,255,255,0.08); }
+  .hy-feat { background:#0a0d0f; padding:40px 32px; }
+  .hy-feat-icon { font-family:var(--serif); font-size:32px; color:var(--accent-warm); margin-bottom:20px; }
+  .hy-feat h3 { font-family:var(--sans); font-size:18px; font-weight:600; margin-bottom:12px; letter-spacing:-0.01em; }
+  .hy-feat p { color:var(--gray-40); font-size:14px; line-height:1.6; }
+
+  /* === TESTIMONIALS === */
+  .hy-testimonials { background:var(--gray-90); }
+  .hy-testimonials h2 { font-size:clamp(36px, 4.5vw, 56px); margin-bottom:60px; max-width:800px; }
+  .hy-test-grid { display:grid; grid-template-columns:repeat(3, 1fr); gap:24px; }
+  .hy-test { background:#0a0d0f; border:1px solid rgba(255,255,255,0.08); overflow:hidden; }
+  .hy-test video { width:100%; aspect-ratio:16/10; object-fit:cover; display:block; background:#000; }
+  .hy-test-meta { padding:24px; }
+  .hy-test-name { font-size:15px; font-weight:600; margin-bottom:4px; }
+  .hy-test-title { font-size:13px; color:var(--gray-40); }
+
+  /* === FAQ === */
+  .hy-faq-section { background:#0a0d0f; }
+  .hy-faq-section h2 { font-size:clamp(40px, 5vw, 68px); margin-bottom:24px; max-width:900px; }
+  .hy-faq-lede { font-size:19px; color:var(--gray-20); max-width:720px; margin-bottom:64px; line-height:1.6; }
+  .hy-faq { max-width:880px; }
+  .hy-faq-item { border-top:1px solid rgba(232,192,140,0.18); }
+  .hy-faq-item:last-child { border-bottom:1px solid rgba(232,192,140,0.18); }
+  .hy-faq-item summary { list-style:none; cursor:pointer; padding:28px 0; display:flex; align-items:center; gap:24px; font-family:var(--serif); font-size:clamp(20px, 2.2vw, 26px); color:#fff; font-weight:400; line-height:1.25; letter-spacing:-0.01em; transition:color 0.2s ease; }
+  .hy-faq-item summary:hover { color:var(--accent-warm); }
+  .hy-faq-item summary::-webkit-details-marker { display:none; }
+  .hy-faq-item summary::before { content:'+'; flex:0 0 auto; width:32px; height:32px; display:inline-flex; align-items:center; justify-content:center; font-family:var(--serif); font-size:28px; color:var(--accent-warm); transition:transform 0.25s ease; line-height:1; font-weight:300; }
+  .hy-faq-item[open] summary::before { transform:rotate(45deg); }
+  .hy-faq-item-body { padding:0 0 32px 56px; font-size:16px; line-height:1.65; color:var(--gray-20); }
+  .hy-faq-item-body p { margin:0 0 12px; }
+  .hy-faq-item-body p:last-child { margin-bottom:0; }
+  .hy-faq-item-body a { color:var(--accent-warm); text-decoration:underline; text-underline-offset:3px; }
+
+  /* === FINAL + FOOTER === */
+  .hy-final { background:linear-gradient(180deg, var(--gray-90) 0%, var(--gray-100) 100%); text-align:center; padding:160px 32px; }
+  .hy-final h2 { font-size:clamp(48px, 7vw, 96px); margin-bottom:32px; max-width:900px; margin-left:auto; margin-right:auto; }
+  .hy-final p { font-size:20px; color:var(--gray-20); max-width:600px; margin:0 auto 48px; }
+  .hy-final .hy-cta-row { justify-content:center; }
+  .hy-foot { background:#000; padding:48px 32px; text-align:center; font-size:12px; color:var(--gray-40); letter-spacing:0.06em; }
+  .hy-foot a { color:var(--accent-warm); text-decoration:none; }
+
+  /* === VERTICAL RAIL === */
+  .hy-vrail { position:fixed; top:0; right:32px; height:100vh; width:170px; z-index:9999; pointer-events:none; opacity:0; transition:opacity 0.5s ease; font-family:var(--sans, 'Inter', sans-serif); }
+  .hy-vrail.visible { opacity:1; }
+  .hy-vrail .hy-vrail-track { position:absolute; top:12vh; bottom:12vh; right:40px; width:24px; }
+  .hy-vrail .hy-vrail-line { position:absolute; top:0; bottom:0; left:50%; width:1px; transform:translateX(-50%); background:linear-gradient(180deg, transparent 0%, rgba(232,192,140,0.45) 5%, rgba(232,192,140,0.45) 95%, transparent 100%); }
+  .hy-vrail .hy-vrail-tick { position:absolute; left:50%; height:1px; background:rgba(232,192,140,0.35); transform:translate(-50%, -50%); }
+  .hy-vrail .hy-vrail-tick.small { width:6px; }
+  .hy-vrail .hy-vrail-tick.decade { width:14px; background:rgba(232,192,140,0.85); }
+  .hy-vrail .hy-vrail-tick-label { position:absolute; left:24px; transform:translateY(-50%); font-size:10px; letter-spacing:0.14em; color:rgba(232,192,140,0.55); font-weight:600; font-feature-settings:'tnum'; white-space:nowrap; text-transform:uppercase; line-height:1; }
+  .hy-vrail .hy-vrail-dot { position:absolute; left:50%; width:13px; height:13px; border-radius:50%; background:#e8c08c; box-shadow:0 0 0 5px rgba(232,192,140,0.18), 0 0 22px rgba(232,192,140,0.85); transform:translate(-50%, -50%); transition:top 0.18s ease-out; }
+  .hy-vrail .hy-vrail-readout { position:absolute; right:64px; text-align:right; transform:translateY(-50%); transition:top 0.18s ease-out; white-space:nowrap; }
+  .hy-vrail .hy-vrail-readout .lbl { display:block; font-size:10px; letter-spacing:0.22em; text-transform:uppercase; color:rgba(232,192,140,0.7); margin-bottom:4px; font-weight:600; }
+  .hy-vrail .hy-vrail-readout .num { display:block; font-family:'Recoleta','Cormorant Garamond','Times New Roman',serif; font-size:54px; line-height:1; color:#e8c08c; letter-spacing:-0.02em; font-feature-settings:'tnum'; font-weight:400; }
+  .hy-vrail .hy-vrail-readout .of { display:block; font-size:10px; color:rgba(232,192,140,0.55); letter-spacing:0.18em; margin-top:6px; text-transform:uppercase; font-weight:500; }
+  @media (max-width:1200px) { .hy-vrail { display:none; } }
+
+  @media (max-width:1100px) { .hy-stability-card { grid-template-columns:1fr; gap:40px; padding:48px 36px; } .hy-stability-priceblock { border-right:0; border-bottom:1px solid rgba(255,255,255,0.08); padding-right:0; padding-bottom:32px; } .hy-cust-grid { grid-template-columns:1fr 1fr; } }
+  @media (max-width:900px) { .hy-section { padding:80px 24px; } .hy-confidence, .hy-pillar-grid, .hy-feature-grid, .hy-test-grid { grid-template-columns:1fr 1fr; } .hy-cust-grid { grid-template-columns:1fr; } .hy-inst-row { grid-template-columns:1fr 1fr; } .hy-transparency-card { padding:40px 24px; } .hy-stability-card { padding:40px 28px; } }
+</style>
+</head>
+<body>
+<div class="hy-root">
+
+  <section class="hy-hero">
+    <video class="hy-hero-video" autoplay muted loop playsinline poster="https://wordpress.com/wp-content/uploads/2025/02/100-year-plan-logo.webp"><source src="https://wordpress.com/wp-content/uploads/2026/02/100-year-plan-lp-720p-no-audio-2030.mp4" type="video/mp4"></video>
+    <div class="hy-hero-overlay"></div>
+    <div class="hy-hero-inner">
+      <span class="hy-eyebrow">The 100-Year Plan</span>
+      <h1>Built to outlast<br><em>everything else.</em></h1>
+      <p class="hy-hero-lede">A single decision today that keeps your work online, hosted, and yours for a century — backed by a special trust, a special-purpose proxy, and a long-term investment.</p>
+      <div class="hy-cta-row"><a href="https://wordpress.com/100-year/" class="hy-cta">Get the 100-Year Plan</a><a href="#pillars" class="hy-cta outline">How it works →</a></div>
+      <div class="hy-confidence">
+        <div class="hy-confidence-item"><span class="num">1,200</span><span class="label">Months of hosting prepaid</span></div>
+        <div class="hy-confidence-item"><span class="num">3</span><span class="label">Independent continuity systems</span></div>
+        <div class="hy-confidence-item"><span class="num">~12%</span><span class="label">Of the plan reserved for long-term investment</span></div>
+        <div class="hy-confidence-item"><span class="num">120</span><span class="label">Days money-back guarantee</span></div>
+      </div>
+    </div>
+  </section>
+
+  <section class="hy-section hy-pillars" id="pillars">
+    <span class="hy-eyebrow">The continuity model</span>
+    <h2>Three systems. One <em>century</em>.</h2>
+    <p class="hy-pillars-lede">Most websites die because a single person, password, or company disappears. The 100-Year Plan removes every single point of failure — structurally, technically, and financially.</p>
+    <div class="hy-pillar-grid">
+      <div class="hy-pillar"><span class="hy-pillar-num">01 / TRUST</span><h3>The Special Trust</h3><p>A special trust structure holds your succession instructions for the site and domain. If you become unreachable, the trust executes your plan — not a hosting company's policy.</p><div class="hy-pillar-detail">Beneficiary-controlled · Updatable for life · Survives account loss</div></div>
+      <div class="hy-pillar"><span class="hy-pillar-num">02 / PROXY</span><h3>The Century Proxy</h3><p>A special-purpose proxy renews your domain on your behalf, with a deep buffer — so an expired card or unread inbox can't lose what you've built.</p><div class="hy-pillar-detail">Independent of Automattic · Auditable · Multi-jurisdiction</div></div>
+      <div class="hy-pillar"><span class="hy-pillar-num">03 / INVESTMENT</span><h3>The Long-Term Investment</h3><p>~12% of every plan goes into a segregated long-term investment account. Its returns finance the hosting, security, and migration of your site for the remaining decades — even if no new customers ever sign up.</p><div class="hy-pillar-detail">Conservatively invested · Independently audited · Designated solely for plan-holders</div></div>
+    </div>
+  </section>
+
+  <section class="hy-section hy-transparency">
+    <div class="hy-transparency-card">
+      <span class="hy-eyebrow">Honest answer</span>
+      <h2>What if Automattic isn't here in 100 years?</h2>
+      <p>Reasonable question. Most companies don't last a century — only about <strong>0.5%</strong> of US companies founded today will still exist in 100 years.</p>
+      <p>That's exactly why the 100-Year Plan was structured so that <strong>Automattic's continued existence isn't required</strong>. The Special Trust, Century Proxy, and Long-Term Investment are deliberately held outside of Automattic — by independent parties with contractual obligations to plan-holders, not to us.</p>
+      <p>If we're still around (we plan to be), great — we keep running it. If we're not, the proxy and investment do. Either way, <strong>your site stays yours</strong>.</p>
+    </div>
+  </section>
+
+  <section class="hy-section hy-institutions">
+    <span class="hy-eyebrow">For perspective</span>
+    <h2>Institutions that already lasted longer than the internet.</h2>
+    <p class="hy-institutions-lede">100 years feels long. It isn't. People have been building things to outlast themselves for a very long time.</p>
+    <div class="hy-inst-row">
+      <div class="hy-inst"><div class="hy-inst-year">578</div><div class="hy-inst-name">Kongō Gumi</div><div class="hy-inst-sub">Construction · 1,400+ yrs</div></div>
+      <div class="hy-inst"><div class="hy-inst-year">1088</div><div class="hy-inst-name">University of Bologna</div><div class="hy-inst-sub">Education · 900+ yrs</div></div>
+      <div class="hy-inst"><div class="hy-inst-year">1688</div><div class="hy-inst-name">Lloyd's of London</div><div class="hy-inst-sub">Insurance · 300+ yrs</div></div>
+      <div class="hy-inst"><div class="hy-inst-year">1768</div><div class="hy-inst-name">Encyclopædia Britannica</div><div class="hy-inst-sub">Knowledge · 250+ yrs</div></div>
+      <div class="hy-inst you"><div class="hy-inst-year">Today</div><div class="hy-inst-name">Your site</div><div class="hy-inst-sub">→ +100 yrs</div></div>
+    </div>
+  </section>
+
+  <section class="hy-section hy-customers">
+    <span class="hy-eyebrow">In the field</span>
+    <h2>Already <em>building for centuries</em>.</h2>
+    <p class="hy-customers-lede">Organizations on the 100-Year Plan today — missions that need to outlast their founders, their boards, and a few generations of the web.</p>
+    <div class="hy-cust-grid">
+      <a class="hy-cust" href="https://netliteracy.org" target="_blank" rel="noopener"><div class="hy-cust-shot"><img src="https://s0.wp.com/mshots/v1/https%3A%2F%2Fnetliteracy.org?w=720&h=450" alt="netliteracy.org" loading="lazy"></div><div class="hy-cust-body"><span class="hy-cust-domain">netliteracy.org</span><h3>Net Literacy</h3><p>A youth-led digital inclusion nonprofit. Their archive on the 100-Year Plan keeps two decades of program records readable for future researchers.</p><span class="hy-cust-meta">Visit site</span></div></a>
+      <a class="hy-cust" href="https://b612foundation.org" target="_blank" rel="noopener"><div class="hy-cust-shot"><img src="https://s0.wp.com/mshots/v1/https%3A%2F%2Fb612foundation.org?w=720&h=450" alt="b612foundation.org" loading="lazy"></div><div class="hy-cust-body"><span class="hy-cust-domain">b612foundation.org</span><h3>B612 Foundation</h3><p>Planetary defense scientists tracking near-Earth asteroids. Work measured in orbits, not quarters — the record needs to stay readable for the long view.</p><span class="hy-cust-meta">Visit site</span></div></a>
+      <a class="hy-cust" href="https://longplayer.org" target="_blank" rel="noopener"><div class="hy-cust-shot"><img src="https://s0.wp.com/mshots/v1/https%3A%2F%2Flongplayer.org?w=720&h=450" alt="longplayer.org" loading="lazy"></div><div class="hy-cust-body"><span class="hy-cust-domain">longplayer.org</span><h3>Longplayer</h3><p>Jem Finer's 1,000-year musical composition began on 1 January 2000 and finishes on 31 December 2999. The site documenting it should not be the part that fails first.</p><span class="hy-cust-meta">Visit site</span></div></a>
+      <a class="hy-cust" href="https://stewart-brand.org" target="_blank" rel="noopener"><span class="hy-cust-soon">Launching soon</span><div class="hy-cust-shot"><img src="https://rosefutures.com/wp-content/uploads/2026/06/Stewart_Brand.png" alt="Stewart Brand" loading="lazy"></div><div class="hy-cust-body"><span class="hy-cust-domain">stewart-brand.org</span><h3>Stewart Brand</h3><p>Co-founder of the Long Now Foundation and editor of the Whole Earth Catalog. His personal archive site is being built on the 100-Year Plan from day one.</p><span class="hy-cust-meta">Visit site</span></div></a>
+    </div>
+  </section>
+
+  <section class="hy-section hy-stability">
+    <span class="hy-eyebrow">Stability that outlives you</span>
+    <h2>One decision. <em>A century of certainty.</em></h2>
+    <p class="hy-stability-lede">A hosted site that's still here when registrars consolidate, software stacks turn over, your inbox migrates somewhere new, and you do too. The Plan carries the whole thing — site, domain, security, succession — from now until the next century.</p>
+    <div class="hy-stability-card">
+      <div class="hy-stability-priceblock">
+        <span class="hy-stability-label">100-Year Plan</span>
+        <div class="hy-stability-price">$38,000</div>
+        <span class="hy-stability-sub">paid once.</span>
+        <p class="hy-stability-note">No annual renewals. No surprise rate hikes. No risk of an expired card or an unreached inbox quietly ending a hundred years of work.</p>
+      </div>
+      <div class="hy-stability-listblock">
+        <h3>What that buys you</h3>
+        <ul class="hy-stability-list">
+          <li><span>A century of managed WordPress.com hosting, security, and format migrations — covered.</span></li>
+          <li><span>Domain registration and ongoing renewal handled by the Century Proxy — with a deep buffer protecting against missed cards or inboxes.</span></li>
+          <li><span>A Special Trust holds your succession instructions; you can update the named beneficiary as life changes.</span></li>
+          <li><span>A Long-Term Investment underwrites the operational costs for the remaining decades — independent of Automattic's continued existence.</span></li>
+          <li><span>Concierge support for you, your successors, and anyone who inherits the site — across generations.</span></li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <section class="hy-section hy-features">
+    <span class="hy-eyebrow">Included for a century</span>
+    <h2>Everything that has to keep working.</h2>
+    <div class="hy-feature-grid">
+      <div class="hy-feat"><div class="hy-feat-icon">⌖</div><h3>Domain registered &amp; renewed</h3><p>One domain registered and carried forward across the Century Proxy with a deep renewal buffer — no annual touches required.</p></div>
+      <div class="hy-feat"><div class="hy-feat-icon">▦</div><h3>Managed hosting for a lifetime</h3><p>Fast WordPress.com infrastructure with global CDN — upgraded as the web changes around you, century-long.</p></div>
+      <div class="hy-feat"><div class="hy-feat-icon">⎈</div><h3>Continuous security updates</h3><p>Patches, TLS renewals, hardening, and threat response handled silently in the background.</p></div>
+      <div class="hy-feat"><div class="hy-feat-icon">⇄</div><h3>Format migrations</h3><p>When today's media formats become unreadable, we migrate them — that's the whole point of a managed plan.</p></div>
+      <div class="hy-feat"><div class="hy-feat-icon">☉</div><h3>Beneficiary designation</h3><p>Name who inherits the site and domain. Update the designation any time, as life changes.</p></div>
+      <div class="hy-feat"><div class="hy-feat-icon">⌘</div><h3>Premium concierge</h3><p>Priority human support — for the original holder and every successor, for as long as the plan runs.</p></div>
+    </div>
+  </section>
+
+  <section class="hy-section hy-testimonials">
+    <span class="hy-eyebrow">Long-term thinkers</span>
+    <h2>People who think in <em>centuries</em>.</h2>
+    <div class="hy-test-grid">
+      <div class="hy-test"><video controls preload="none" poster="https://wordpress.com/wp-content/uploads/2025/02/100-year-testimonial-kevin-kelly-mobile.webp"><source src="https://wordpress.com/wp-content/uploads/2025/02/100-year-testimonial-kevin-kelly.mp4" type="video/mp4"></video><div class="hy-test-meta"><div class="hy-test-name">Kevin Kelly</div><div class="hy-test-title">Founding Executive Editor, WIRED</div></div></div>
+      <div class="hy-test"><video controls preload="none" poster="https://wordpress.com/wp-content/uploads/2025/05/daniel-kent-video-cover-2.webp"><source src="https://wordpress.com/wp-content/uploads/2025/05/100-year-testimonial-daniel-kent-1080p.mp4" type="video/mp4"></video><div class="hy-test-meta"><div class="hy-test-name">Daniel Kent</div><div class="hy-test-title">Founder, Net Literacy</div></div></div>
+      <div class="hy-test"><video controls preload="none" poster="https://wordpress.com/wp-content/uploads/2025/06/100-year-testimonial-zander-rose.webp"><source src="https://wordpress.com/wp-content/uploads/2025/02/100-year-testimonial-zander-rose.mp4" type="video/mp4"></video><div class="hy-test-meta"><div class="hy-test-name">Zander Rose</div><div class="hy-test-title">Long Now Foundation</div></div></div>
+    </div>
+  </section>
+
+  <section class="hy-section hy-faq-section" id="faq">
+    <span class="hy-eyebrow">Everything you need to know</span>
+    <h2>Common <em>questions</em>.</h2>
+    <p class="hy-faq-lede">Answers about the structure, the price, the succession path, and what happens if any single piece of the system fails.</p>
+    <div class="hy-faq">
+      <details class="hy-faq-item"><summary>What does $38,000 actually pay for?</summary><div class="hy-faq-item-body"><p>A century of managed WordPress.com hosting, domain registration with renewal handled by the Century Proxy, continuous security updates, format migrations as the web evolves, and concierge support — for you and every successor.</p><p>About <strong>12% of the price</strong> is set aside in the Long-Term Investment account. Its returns finance the operational costs for the remaining decades, which is the part that makes the 100-year guarantee real instead of theoretical.</p></div></details>
+      <details class="hy-faq-item"><summary>What if Automattic isn't here in 100 years?</summary><div class="hy-faq-item-body"><p>Only about 0.5% of companies founded today will still exist in 100 years — we're aware. That's why the Plan was structured so Automattic's continued existence isn't required.</p><p>The Special Trust, Century Proxy, and Long-Term Investment are held outside Automattic, by independent parties with contractual obligations to plan-holders. If we're here (we plan to be), we keep running it. If not, the proxy and investment carry the site to its century mark.</p></div></details>
+      <details class="hy-faq-item"><summary>Can I transfer the plan to someone else?</summary><div class="hy-faq-item-body"><p>Yes. You name a beneficiary at purchase — and you can change the designation any time during your life. If you can't be reached, the Special Trust executes the transfer to the named beneficiary, without a probate scramble or a support-ticket lottery.</p></div></details>
+      <details class="hy-faq-item"><summary>What happens to my site if I die before the 100 years are up?</summary><div class="hy-faq-item-body"><p>The Special Trust executes your succession instructions. The site stays online; the domain stays registered; the named beneficiary becomes the new owner of record. They inherit the same century of managed hosting, the same concierge support, and the same beneficiary-designation rights for the remainder of the term.</p></div></details>
+      <details class="hy-faq-item"><summary>What's the refund policy?</summary><div class="hy-faq-item-body"><p>120 days from purchase, full refund — no questions. After 120 days the trust paperwork and investment funding are in motion, so a partial refund may be possible depending on the stage. Contact support and we'll walk through it.</p></div></details>
+      <details class="hy-faq-item"><summary>Can I still update the design and content of my site?</summary><div class="hy-faq-item-body"><p>Yes — it's a normal WordPress.com site with the full block editor, themes, plugins, custom code, and the AI Site Editor. The Plan is about <em>keeping it online</em> for a century. The day-to-day of writing, designing, and publishing works exactly like any other WordPress.com site.</p></div></details>
+      <details class="hy-faq-item"><summary>What does "format migrations" mean?</summary><div class="hy-faq-item-body"><p>Today's media formats won't be tomorrow's. JPEG, MP4, WebP, AVIF — each one will eventually be superseded. When that happens, we migrate your content into whatever the current standard is, so a visitor in 2086 can still actually view what you published in 2026.</p></div></details>
+      <details class="hy-faq-item"><summary>Can I add more 100-Year Plans or 100-Year Domains later?</summary><div class="hy-faq-item-body"><p>Yes. Each is a separate one-time purchase. Some holders bundle multiple domains around a single Plan; others operate several Plans across different sites. If you only need the domain piece without the hosting, the <a href="./100-year-domain.html">100-Year Domain</a> covers that on its own.</p></div></details>
+      <details class="hy-faq-item"><summary>How is the Long-Term Investment managed?</summary><div class="hy-faq-item-body"><p>Conservatively, in a segregated account held outside Automattic, with returns designated solely for plan-holder operations. The fund is independently audited, and we publish a public continuity report on a defined cadence so plan-holders can verify the math is still working.</p></div></details>
+    </div>
+  </section>
+
+  <section class="hy-final">
+    <h2>Decide once.<br><em>Outlast everything.</em></h2>
+    <p>A single decision today that keeps your domain registered, your site hosted, and your work readable for a century.</p>
+    <div class="hy-cta-row"><a href="https://wordpress.com/100-year/" class="hy-cta">Get the 100-Year Plan</a><a href="./100-year-domain.html" class="hy-cta outline">Just need the domain? →</a></div>
+  </section>
+
+  <footer class="hy-foot">© <span class="hy-year-now">2026</span>–<span class="hy-year-plus100">2126</span> · WordPress.com · The 100-Year Plan · <a href="#">Continuity disclosures</a></footer>
+</div>
+
+<script>
+(function(){
+  var now = new Date(); var Y = now.getFullYear(); var Yp = Y + 100;
+  var els = document.querySelectorAll('.hy-year-now'); for (var i=0; i<els.length; i++) els[i].textContent = Y;
+  els = document.querySelectorAll('.hy-year-plus100'); for (i=0; i<els.length; i++) els[i].textContent = Yp;
+
+  // Build vertical rail
+  var rail = document.createElement('div'); rail.className = 'hy-vrail';
+  var track = document.createElement('div'); track.className = 'hy-vrail-track';
+  var line = document.createElement('div'); line.className = 'hy-vrail-line'; track.appendChild(line);
+  for (var y=0; y<=100; y+=5) {
+    var isDec = (y%10 === 0);
+    var tk = document.createElement('div'); tk.className = 'hy-vrail-tick ' + (isDec ? 'decade' : 'small'); tk.style.top = y + '%'; track.appendChild(tk);
+    if (isDec) { var lbl = document.createElement('div'); lbl.className = 'hy-vrail-tick-label'; lbl.style.top = y + '%'; lbl.textContent = (Y + y); track.appendChild(lbl); }
+  }
+  var dot = document.createElement('div'); dot.className = 'hy-vrail-dot'; dot.style.top = '0%'; track.appendChild(dot);
+  rail.appendChild(track);
+  var readout = document.createElement('div'); readout.className = 'hy-vrail-readout'; readout.style.top = '0%';
+  readout.innerHTML = '<span class="lbl">Year</span><span class="num" id="hy-vrail-num">' + Y + '</span><span class="of">of ' + Yp + '</span>';
+  rail.appendChild(readout);
+  document.body.appendChild(rail);
+
+  var num = document.getElementById('hy-vrail-num');
+  function update(){
+    var d = document.documentElement;
+    var m = (d.scrollHeight - d.clientHeight) || 1;
+    var p = Math.min(1, Math.max(0, (window.scrollY || d.scrollTop) / m));
+    dot.style.top = (p*100) + '%';
+    readout.style.top = (p*100) + '%';
+    num.textContent = Y + Math.round(p*100);
+    rail.classList.toggle('visible', p > 0.04);
+  }
+  window.addEventListener('scroll', update, {passive:true});
+  window.addEventListener('resize', update);
+  update();
+})();
+</script>
+</body>
+</html>
